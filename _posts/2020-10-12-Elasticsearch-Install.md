@@ -56,8 +56,8 @@ $ sudo service elasticsearch start
 $ sudo service elasticsearch status
 ```
 ![](C:\IMG\)
-![연결및 전체주소 확인.JPG](C:\IMG\연결및 전체주소 확인.JPG)
-
+![(C:\IMG\연결및 전체주소 확인.JPG)](C:\IMG\연결및 전체주소 확인.JPG)
+![C:\IMG\연결및 전체주소 확인.JPG](C:\IMG\연결및 전체주소 확인.JPG)
 ```cpp
 $ sudo service elasticsearch stop
 ```
