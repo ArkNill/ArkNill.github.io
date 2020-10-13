@@ -56,7 +56,6 @@ $ sudo service elasticsearch start
 $ sudo service elasticsearch status
 ```
 ![](C:\IMG\)
-![a](C:\IMG\ConnectionConfirm.JPG)
 
 ```cpp
 $ sudo service elasticsearch stop
@@ -74,7 +73,7 @@ inet ==192.168.56.102==  netmask 255.255.255.0  broadcast 192.168.56.255
 ![](C:\IMG\)
 
 Host Connection Confirm
-![](C:\IMG\통신확인.jpg)
+![](https://i.imgur.com/AWugbSp.jpg)
 
 curl -X GET "http://192.168.56.102:9200/"
 ![](C:\IMG\엘라스틱서치 서버주소 확인.jpg)
