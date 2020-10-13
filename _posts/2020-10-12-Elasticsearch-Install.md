@@ -2,28 +2,29 @@
 layout: post
 Title:  "[Ubuntu] Elasticsearch 설치(미완)"
 ---
+```cpp
 ## Elasticsearch란?
 
 Elasticsearch는 Apache Lucene( 아파치 루씬 ) 기반의 Java 오픈소스 분산 검색 엔진입니다.
 
 Elasticsearch를 통해 루씬 라이브러리를 단독으로 사용할 수 있게 되었으며, 방대한 양의 데이터를 신속하게, 거의 실시간( NRT, Near Real Time )으로 저장, 검색, 분석할 수 있습니다.
-
+```
 - - -
-
+```cpp
 ## Check Up Before Install Elasticsearch 
 - Oracle VM Virtual Box 버전 6.1.14 이용
 - Ubuntu 20.04.1 LTS 환경에서 설치 진행
 - openjdk 8 자바 설치 필요
-
+```
 - - -
 
-#### java install
+## java install
 $ sudo apt-get install openjdk-8-jre
 $ sudo apt-get install openjdk-8-jdk
 
 - - -
 
-##### java version confirm
+### java version confirm
 $ javac -version
 
 ==javac 1.8.0_265==
@@ -51,32 +52,33 @@ $ sudo dpkg -i elasticsearch-7.9.2-amd64.deb
 차후의 진행도에 따라 자동부팅 설정을 결정한다.
 
 $ sudo service elasticsearch start
-![](D:\WorkSpace\IMG\)
+![](C:\IMG\)
 $ sudo service elasticsearch status
-![](D:\WorkSpace\IMG\)
+![](C:\IMG\)
 $ sudo service elasticsearch stop
-![](D:\WorkSpace\IMG\)
+![](C:\IMG\)
 $ curl -XGET "http://localhost:9200"
-![](D:\WorkSpace\IMG\)
+![](C:\IMG\)
 
 - - -
 
-#### Elasticsearch 동작확인
+## Elasticsearch 동작확인
 
 ifconfig로 주소 확인
 inet ==192.168.56.102==  netmask 255.255.255.0  broadcast 192.168.56.255
+![](C:\IMG\)
 
 Host Connection Confirm
-![](D:\WorkSpace\IMG\통신확인.jpg)
+![](C:\IMG\통신확인.jpg)
 
 curl -X GET "http://192.168.56.102:9200/"
-![](D:\WorkSpace\IMG\)
+![](C:\IMG\엘라스틱서치 서버주소 확인.jpg)
 curl -X POST -H 'Content-Type: application/json'  'http://192.168.56.102:9200/tutorial/techarticle/1' -d '{ "message": "ElasticSearch installation on Ubuntu Linux!" }'
-![](D:\WorkSpace\IMG\)
+![](C:\IMG\)
 curl -X GET 'http://192.168.56.102:9200/tutorial/techarticle/1'
-![](D:\WorkSpace\IMG\)
+![](C:\IMG\)
 curl -X PUT -H 'Content-Type: application/json' 'http://192.168.56.102:9200/tutorial/techarticle/1' -d '{ "message": "Tech Tutorials" }'
-![](D:\WorkSpace\IMG\)
+![](C:\IMG\)
 
 - - -
 
