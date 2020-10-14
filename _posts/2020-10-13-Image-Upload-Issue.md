@@ -3,7 +3,11 @@ layout: post
 Title:  "Image Upload Issue"
 ---
 
+- - -
+
 ## 문제 해결
+
+- - -
 
 하루패드는 이미지 업로드 기능이 없어 로컬 저장소에서
 바로 문서에 이미지 삽입이 불가능하다.
@@ -16,7 +20,7 @@ Title:  "Image Upload Issue"
 
 - - -
 
-- 참조
+**참조**
 - https://xzpluszone.tistory.com/11
 - https://namu.wiki/w/imgur
 - https://imgur.com/
