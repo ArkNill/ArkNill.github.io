@@ -1,7 +1,8 @@
 ---
 layout: post
-Title:  "2020.10.14 국립국어원 우리말 빅데이터의 활용(미완)"
+Title:  "2020.10.14 Big Data Debate"
 ---
+## Big Data Debate
 ![](https://i.imgur.com/T0fzF1P.jpg)
 ## 토론회 필기 내용
 
