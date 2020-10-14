@@ -116,6 +116,6 @@ Reason: Unused.
 
 
 
-- 참조
-https://github.com/elastic/elasticsearch-river-couchdb
-https://wpsocket.com/plugin/couchdb/
+참조
+- https://github.com/elastic/elasticsearch-river-couchdb
+- https://wpsocket.com/plugin/couchdb/
