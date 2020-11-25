@@ -3,7 +3,8 @@ layout: post
 Title:  "Spring @ComponentScan의 다양한 설정들"
 ---
 
-## @ComponentScan Annotaion
+## ComponentScan Annotaion
+
 @Componentscan 어노테이션은 @Component어노테이션 및 streotype(@Service, @Repository, @Controller.)어노테이션이 부여된 Class들을 ==자동으로 Scan하여 Bean으로 등록해주는 역할==을 하는 어노테이션입니다.
 ApplicationContext 설정 클래스에 @ComponentScan("패키지 경로")을 적어두면 해당 패키지에 있는 @Controller, @Service, @Repogitory, @Component 객체들이 DI 컨테이너에 등록됩니다.
 
@@ -43,7 +44,8 @@ Component1 Constructor
 - - -
 
 ## @ComponentScan의 다양한 설정
-##### 1. basePackages
+
+### 1. basePackages
 basePackages는 기본 설정 값이다. 해당 경로를 포함하는 하위 패키지를 모두 스캔한다.
 
 ```cpp
@@ -61,7 +63,7 @@ class AppContextConfig{
 }
 ```
 - - -
-##### 2. useDefaultFilters
+### 2. useDefaultFilters
 useDefaultFilters는 기본값이 true이고 유효한 패키지 경로에서 @Controller, @Service, @Repogitory, @Component 등의 어노테이션이 사용된 객체를 DI 컨테이너에 등록한다.
 
 ```cpp
@@ -73,7 +75,7 @@ class AppContextConfig{
 ```
 위와같이 useDefaultFilters를 바꾸고 코드를 다시 실행시켜 보면, "Component1 Constructor" 문구가 출력되지 않는다.
 - - -
-##### 3. includeFilters & excludeFilters
+### 3. includeFilters & excludeFilters
 다시 @Component 어노테이션이 사용된 객체를 불러오고 싶으면,  includeFilters 설정을 사용하면 된다. includeFilters는 특정 조건을 만족하는 클래스만을 스캔하도록 지정한다. includeFilters에서 사용할 수 있는 필터 타입은 다음과 같다.
 
 - FilterType.ANNOTATION
@@ -102,7 +104,7 @@ public class AppContextConfig {
 ```
 useDefaultFilters = false 설정을 했지만,  FilterType.ANNOTATION 필터를 사용하여 @Component, @Repository, @Service, @Controller 어노테이션이 적용된 객체를 가져온다.
 - - -
-####**필자는 필요한 class만 가져오길 원했기 떄문에 FilterType.ANNOTATION을 사용하였다. (메모: 프로젝트 ServletConfig 참조)**
+**필자는 필요한 class만 가져오길 원했기 떄문에 FilterType.ANNOTATION을 사용하였다. (메모: 프로젝트 ServletConfig 참조)**
 - - -
 FilterType.ASPECTJ는 AspectJ 패턴을 사용하여 객체를 가져온다.
 ```cpp
@@ -172,7 +174,8 @@ public class CustomFilter implements TypeFilter {
 ```
 excludeFilters는 includeFilters와 사용법을 동일하다. 해당 기준의 객체를 불러오는 것이 아니라 제외한다는 점에서만 다르다.
 - - -
-##### 4. lazyInit
+
+### 4. lazyInit
 기본적으로 ComponentScan을 통해 찾은 클래스들은, 바로 초기화되어 컨텍스트에 빈으로 등록된다. 하지만 lazyInit 설정을 사용하면, 실제 해당 클래스가 사용될 때 초기화 한다.
 ```cpp
 @Configuration
